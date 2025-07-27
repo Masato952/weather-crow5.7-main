@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "category": "weatherConditions",
+      "sizes": [
+        { "width": 72, "label": "sm", "scale":0.255},
+        { "width": 270, "label": "lg", "scale":0.255}
+      ]
+    },
+    {
+      "category": "sm",
+      "sizes": [{ "width": 32, "label": "sm", "scale":0.3}]
+    },
+    {
+      "category": "degree",
+      "sizes": [
+        { "width": 16, "label": "sm", "scale":1.85}
+      ]
+    },
+    {
+      "category": "md",
+      "sizes": [{ "width": 64, "label": "md" ,"scale":0.35}]
+    },
+    {
+      "category": "lg",
+      "sizes": [{ "width": 220, "label": "lg", "scale":0.25}]
+    },
+    {
+      "category": "extraLarge",
+      "sizes": [{ "width": 240, "label": "lg", "scale":0.25}]
+    },
+    {
+      "category": "warning",
+      "sizes": [{ "width": 45, "label": "sm", "scale":0.25}]
+    }
+  ],
+  "threshold": 100
+}
