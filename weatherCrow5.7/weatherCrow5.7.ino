@@ -411,7 +411,8 @@ private:
     weatherInfo.windSpeed = String(weatherCrtResponse["wind"]["speed"].as<float>(), 1);
     weatherInfo.l_timezone = weatherCrtResponse["timezone"].as<long>();
     weatherInfo.city_name = weatherCrtResponse["name"].as<String>();
-    Serial.println(weatherInfo.windSpeed);
+    Serial.printf("windSpeed: %s m/s\n", weatherInfo.windSpeed.c_str());
+
 
     // set RTC to set current time (if RTC is available)
     setRTC(weatherInfo.currentDateTime);
@@ -918,7 +919,7 @@ bool parseLocationFromJson(String json)
     {
       // Wind speed
       memset(buffer, 0, sizeof(buffer));
-      snprintf(buffer, sizeof(buffer), "%.1f", weatherApiResponse["current"]["wind_speed"].as<float>());
+      snprintf(buffer, sizeof(buffer), "%s", weatherInfo.windSpeed.c_str());
       EPD_ShowStringRightAligned(centerX, y, buffer, FONT_SIZE_36, BLACK);
 
       memset(buffer, 0, sizeof(buffer));
